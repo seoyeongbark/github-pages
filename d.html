@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>편의점게임</title>
+     <style>
+         body {
+             background-image: url('image/background.png');  /* 이미지 불러오기 */
+             background-size: cover; /* 화면 전체를 덮도록 설정 */
+             background-position: center;
+             background-repeat: no-repeat;
+             text-align: center; 
+             font-family: Arial, sans-serif;
+             height: 130vh;
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+         }
+         p {
+             font-size: 50px;
+             font-weight: bold;
+             margin=bottom:200px;
+         }
+         .buttons {
+             margin-top: 30px;
+         }
+     </style>
+</head>
+<body>
+    
+<p id="text">편의점패닉!</p>
+<div class="buttons">
+    <p><a href="game_instructions.html"><input type="button" value="게임설명"></a></p>
+    <p><a href="start.html"><input type="button" value="게임시작"></a></p>
+</div>
+     
+<script>
+    function changeColor() {
+        const colors = ["red", "blue", "green", "purple", "orange"];
+        let randomIndex = Math.floor(Math.random() * colors.length);
+        document.getElementById("text").style.color = colors[randomIndex];
+    }
+    
+    setInterval(changeColor, 1000);
+</script>
+
+</body>
+</html>
